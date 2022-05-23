@@ -29,15 +29,16 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   //property
   late String _lampImage; //Image Name
-  late double _lampWidth; //Image Width
-  late double _lampHeight; //Image Height
+  late double _lampWidth; //Image Width 크기는 더블로
+  late double _lampHeight; //Image Height 크기는 더블로
   late String _buttonName; //Button Name
   late bool _switch; //switch status
   late String _lampSizeStatus; //lamp Size status
 
   @override
   void initState() {
-    super.initState();
+    // TODO: implement setState
+    super.initState();  //화면이 뜨기전에 실행 되는것
     _lampImage = 'images/lamp_on.png';
     _lampWidth = 150;
     _lampHeight = 300;
@@ -45,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _switch =true;
     _lampSizeStatus = 'small';
 
-    // TODO: implement setState
+    
     
     
 
@@ -93,9 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         Text(
                           '전구 스위치',
                         ),
-                        Switch(value: _switch,
+                        Switch(
+                          value: _switch,  //화면에 보여주는 값
                         onChanged:(value){
-                          setState(() {
+                          setState(() {  //화면이 바뀐다.
                           _switch =value;
                           decisionOnOff();
                             
@@ -113,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 //Functions
-decisionOnOff(){
+decisionOnOff(){   //(넘겨줄 데이터 값)하지만 지금은 없다.
 if(_switch){
   _lampImage = 'images/lamp_on.png';
 }else{
