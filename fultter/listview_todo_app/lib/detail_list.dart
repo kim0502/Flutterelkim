@@ -19,7 +19,7 @@ class _DetailListState extends State<DetailList> {
         child :Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(Message.photo), 
+            Image.asset(Message.imagePath), 
             SizedBox(
               height: 20,
             ),

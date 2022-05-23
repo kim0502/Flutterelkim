@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
+
 class Message{
   static String workList = '';
-  static String photo = '';
-  static String barcolor = '';
+  static String imagePath = '';
+  static Color color = Colors.black;
 } 

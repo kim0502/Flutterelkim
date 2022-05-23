@@ -18,9 +18,9 @@ class _TableListState extends State<TableList> {
   @override
   void initState() {
       super.initState();
-      todoList.add(TodoList(imagePath: "images/cart.png", workList: '책구매', photo: "images/cart.png"));
-      todoList.add(TodoList(imagePath: "images/clock.png", workList: '철수와 약속', photo: "images/clock.png"));
-      todoList.add(TodoList(imagePath: "images/pencil.png", workList: '스터디 준비하기', photo: "images/pencil.png"));
+      todoList.add(TodoList(imagePath: "images/cart.png", workList: '책구매'));
+      todoList.add(TodoList(imagePath: "images/clock.png", workList: '철수와 약속'));
+      todoList.add(TodoList(imagePath: "images/pencil.png", workList: '스터디 준비하기'));
 
   }
   @override
@@ -49,7 +49,7 @@ class _TableListState extends State<TableList> {
               child: GestureDetector(
                 onTap: (){
                   Message.workList = todoList[position].workList;
-                  Message.photo = todoList[position].photo;
+                  Message.imagePath = todoList[position].imagePath;
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const DetailList(),));
