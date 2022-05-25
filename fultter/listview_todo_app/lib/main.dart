@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'insert_list.dart';
-import 'table_list.dart';
+import 'view/insert_list.dart';
+import 'view/table_list.dart';
 
 void main() {
   runApp(const MyApp());
