@@ -6,6 +6,6 @@ main(){
   //name2 = '조조';
 
   final DateTime now1 = DateTime.now();
-
+  print(now1);
   //const DateTime now2 = DateTime.now(); // 이렇게 쓸 수 없다.
 }

@@ -67,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     setState((){
                       TurnONoff();
+                      _showDialog(context);
                     });
                  },
                   style: ElevatedButton.styleFrom(
@@ -86,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     setState((){
                       TurnonOFF();
+                      _showDialog(context);
                     });
                   },
                   style: ElevatedButton.styleFrom(
@@ -120,26 +122,27 @@ TurnonOFF(){
   }
 }
 
-// _showDialog(BuildContext context){
-//   showDialog(
-//     context: context,
-//     barrierDismissible: false, //user must tap button!
-//     builder: (BuildContext ctx){    //화면을 만드는건 builder이다.
-//      return AlertDialog(
-//        title:  const Text('경고'),
-//        content: const Text('현재 램프가 켜진 상태입니다.'),
-//        actions: [
-//          Center( 
-//            child:
-//             TextButton(
-//            onPressed:(){
-//            Navigator.of(ctx).pop(); // pop 위에 내용을 날리면서 실행
-//            },
-//           child: const Text('네, 알겠습니다.'
-//           ), 
-//           ),
-//          ),
-//        ],
-//      );
-//     });
+_showDialog(BuildContext context){
+  showDialog(
+    context: context,
+    barrierDismissible: false, //user must tap button!
+    builder: (BuildContext ctx){    //화면을 만드는건 builder이다.
+     return AlertDialog(
+       title:  const Text('경고'),
+       content: const Text('현재 램프가 켜진 상태입니다.'),
+       actions: [
+         Center( 
+           child:
+            TextButton(
+           onPressed:(){
+           Navigator.of(ctx).pop(); // pop 위에 내용을 날리면서 실행
+           },
+          child: const Text('네, 알겠습니다.'
+          ), 
+          ),
+         ),
+       ],
+     );
+    });
+}
 }
