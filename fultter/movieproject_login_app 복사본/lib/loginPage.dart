@@ -40,13 +40,12 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
-               
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderSide:
                         BorderSide(color: Color.fromARGB(255, 14, 5, 193)),
                   ),
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.person,
                     color: Colors.white,
                   ),
@@ -61,13 +60,12 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextField(
-                 obscureText: true,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderSide:
                         BorderSide(color: Color.fromARGB(255, 14, 5, 193)),
                   ),
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.lock,
                     color: Colors.white,
                   ),
@@ -81,7 +79,7 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-               
+                Navigator.pushNamed(context, '/mainPage');
               },
               child: Text('로그인'),
             ),
@@ -106,12 +104,4 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-
-
-
-
-
-
-
-
 }
